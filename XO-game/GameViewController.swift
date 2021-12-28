@@ -39,7 +39,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func restartButtonTapped(_ sender: UIButton) {
-        
+        Log(.restartGame)
     }
     
     private func goToFirstState() {
