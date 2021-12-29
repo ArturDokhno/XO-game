@@ -27,4 +27,16 @@ public enum Player: CaseIterable {
             return OView()
         }
     }
+    
+    func winnerText() -> String {
+        var text = "No winner"
+        switch self {
+        case .first:
+            text = "First player win"
+        case .second:
+            text = "Second player win"
+        }
+        
+        return text
+    }
 }

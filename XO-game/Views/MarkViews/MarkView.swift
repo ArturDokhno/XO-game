@@ -10,6 +10,16 @@ import UIKit
 
 public class MarkView: UIView, Copying {
     
+    // MARK: - Copying
+    
+    required convenience init(_ prototype: MarkView) {
+        self.init()
+        self.lineWidth = prototype.lineWidth
+        self.lineColor = prototype.lineColor
+        
+        debugPrint("\(prototype.lineColor)")
+    }
+    
     // MARK: - Properties
     
     public var lineColor: UIColor = .black
@@ -58,14 +68,6 @@ public class MarkView: UIView, Copying {
         super.init(frame: CGRect(origin: .zero,
                                  size: CGSize(width: 90, height: 90)))
     }
-    
-    required init(_ prototype: MarkView) {
-        super.init(frame: prototype.frame)
-        self.lineColor = prototype.lineColor
-        self.lineWidth = prototype.lineWidth
-        self.textColor = prototype.textColor
-    }
-    
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
