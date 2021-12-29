@@ -16,12 +16,14 @@ class GameViewController: UIViewController {
     @IBOutlet var winnerLabel: UILabel!
     @IBOutlet var restartButton: UIButton!
     
-    private let gameboard = Gameboard()
     private var currentState: GameState! {
         didSet {
             self.currentState.begin()
         }
     }
+    private var currentPlayer: Player = .first
+    
+    private let gameboard = Gameboard()
     
     private lazy var referee = Referee(gameboard: self.gameboard)
     
@@ -40,6 +42,10 @@ class GameViewController: UIViewController {
     
     @IBAction func restartButtonTapped(_ sender: UIButton) {
         Log(.restartGame)
+        self.gameboard.clear()
+        self.gameboardView.clear()
+        self.currentPlayer = .first
+        self.goToFirstState()
     }
     
     private func goToFirstState() {
