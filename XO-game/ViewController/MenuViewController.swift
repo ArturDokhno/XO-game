@@ -12,21 +12,15 @@ class MenuViewController: UIViewController {
     
     private var gameType = GameType.pvi
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     @IBAction func buttonAiGameTapped(_ sender: Any) {
         self.gameType = GameType.pvi
         openGame()
     }
     
-    
     @IBAction func buttonHumansGameTapped(_ sender: Any) {
         self.gameType = GameType.pvp
         openGame()
     }
-    
     
     private func openGame() {
         performSegue(withIdentifier: "showGame", sender: nil)
@@ -38,7 +32,6 @@ class MenuViewController: UIViewController {
             upcoming.set(gameType: self.gameType)
         }
     }
-    
     
 }
 

@@ -18,8 +18,6 @@ class BotInputState: GameState {
     private weak var gameboard: Gameboard?
     private weak var gameboardView: GameboardView?
     
-    
-    
     init(player: Player, inputState: GameViewInput, gameboard: Gameboard, gameboardView: GameboardView) {
         self.player = player
         
@@ -29,9 +27,6 @@ class BotInputState: GameState {
         self.gameboardView = gameboardView
     }
     
-    
-    // MARK: -
-    
     func begin() {
         self.inputState.winnerLabel(hide: true)
         self.inputState.firstPlayerTurnLabel(hide: true)
@@ -40,8 +35,6 @@ class BotInputState: GameState {
         let position: GameboardPosition = generateMovePosition()
         addMark(at: position)
     }
-    
-    
     
     func addMark(at position: GameboardPosition) {
         if self.isCompleted { return }
@@ -53,11 +46,7 @@ class BotInputState: GameState {
         
         self.isCompleted = true
     }
-}
 
-//MARK: - Generate move functions
-extension BotInputState {
-    
     private func generateMovePosition() -> GameboardPosition {
         if let freePositions = gameboard?.getFreePositions() {
             let randomMoveId = Int.random(in: 0 ..< freePositions.count)

@@ -19,7 +19,6 @@ class PlayerInputState: GameState {
     weak var gameboard: Gameboard?
     weak var gameboardView: GameboardView?
     
-    
     init(player: Player, inputState: GameViewInput, gameboard: Gameboard, gameboardView: GameboardView) {
         self.player = player
 
@@ -28,9 +27,6 @@ class PlayerInputState: GameState {
         self.gameboard = gameboard
         self.gameboardView = gameboardView
     }
-    
-    
-    // MARK: -
     
     func begin() {
         switch self.player {

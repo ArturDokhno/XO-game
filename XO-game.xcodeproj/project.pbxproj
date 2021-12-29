@@ -112,6 +112,13 @@
 			path = IBuilder;
 			sourceTree = "<group>";
 		};
+		75D19D29277CB8E00027B4B6 /* Move */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Move;
+			sourceTree = "<group>";
+		};
 		75FA072A277B211E009CDAA4 /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +141,7 @@
 		75FA0735277B6CC2009CDAA4 /* Command */ = {
 			isa = PBXGroup;
 			children = (
+				75D19D29277CB8E00027B4B6 /* Move */,
 				75FA073C277B6FF4009CDAA4 /* LoggerInvoker.swift */,
 				75FA0738277B6D4D009CDAA4 /* LogCommand.swift */,
 				75FA0736277B6CD7009CDAA4 /* LoggerReceiver.swift */,

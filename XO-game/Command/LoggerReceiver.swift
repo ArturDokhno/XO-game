@@ -8,13 +8,9 @@
 
 import Foundation
 
-
-// MARK: - Receiver
-
 class LoggerReceiver {
     
     static let shared: LoggerReceiver = LoggerReceiver()
-    
     
     func log(mesage: String) {
         debugPrint(mesage)

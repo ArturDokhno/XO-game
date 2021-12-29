@@ -8,9 +8,6 @@
 
 import Foundation
 
-
-// MARK: - Command
-
 class LoggerCommand {
     
     let message: String
@@ -18,7 +15,6 @@ class LoggerCommand {
     init(message: String) {
         self.message = message
     }
-    
     
     func execute() {
         LoggerReceiver.shared.log(mesage: self.message)

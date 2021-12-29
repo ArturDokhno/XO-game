@@ -8,8 +8,6 @@
 
 import Foundation
 
-// MARK: - Invoker
-
 class LoggerInvoker {
      
     static let shared: LoggerInvoker = LoggerInvoker()

@@ -10,8 +10,6 @@ import UIKit
 
 public class MarkView: UIView, Copying {
     
-    // MARK: - Copying
-    
     required convenience init(_ prototype: MarkView) {
         self.init()
         self.lineWidth = prototype.lineWidth
@@ -19,8 +17,6 @@ public class MarkView: UIView, Copying {
         
         debugPrint("\(prototype.lineColor)")
     }
-    
-    // MARK: - Properties
     
     public var lineColor: UIColor = .black
     public var lineWidth: CGFloat = 7
@@ -62,8 +58,6 @@ public class MarkView: UIView, Copying {
         return label
     }()
     
-    // MARK: - Init
-    
     public init() {
         super.init(frame: CGRect(origin: .zero,
                                  size: CGSize(width: 90, height: 90)))
@@ -72,8 +66,6 @@ public class MarkView: UIView, Copying {
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    // MARK: - UIView
     
     public final override func layoutSubviews() {
         super.layoutSubviews()
@@ -93,8 +85,6 @@ public class MarkView: UIView, Copying {
             layoutIfNeeded()
         }
     }
-    
-    // MARK: - Methods
     
     public func animateIn(duration: TimeInterval = 0.5,
                           completion: @escaping () -> Void) {
@@ -121,14 +111,10 @@ public class MarkView: UIView, Copying {
         CATransaction.commit()
     }
     
-    // MARK: - UI
-    
     private final func updateLabel() {
         let size = 0.1 * bounds.height
         label.font = UIFont.systemFont(ofSize: size, weight: .thin)
     }
-    
-    // MARK: - Template methods
     
     internal func updateShapeLayer() {
         // meant for subclasses to override

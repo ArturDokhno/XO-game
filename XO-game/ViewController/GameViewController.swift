@@ -8,9 +8,6 @@
 
 import UIKit
 
-import UIKit
-
-
 protocol GameViewInput: UIViewController {
     func firstPlayerTurnLabel(hide: Bool)
     func secondPlayerTurnLabel(hide: Bool)
@@ -18,8 +15,6 @@ protocol GameViewInput: UIViewController {
     func winnerLabel(hide: Bool)
     func winnerLabel(text: String)
 }
-
-
 
 class GameViewController: UIViewController {
 
@@ -31,7 +26,6 @@ class GameViewController: UIViewController {
     
     private var gameType = GameType.pvi
     
-    
     private let gameboard = Gameboard()
     lazy var referee = Referee(gameboard: self.gameboard)
     
@@ -42,9 +36,6 @@ class GameViewController: UIViewController {
             self.currentState.begin()
         }
     }
-    
-    
-    // MARK: -
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,8 +60,6 @@ class GameViewController: UIViewController {
         
         self.switchToFirstState()
     }
-    
-    // MARK: - State machine
     
     func switchToFirstState() {
         self.swithToPlayerInputState(with: .first)
@@ -135,14 +124,12 @@ class GameViewController: UIViewController {
     
 }
 
-//MARK: - Received GameType
 extension GameViewController {
     
     public func set(gameType: GameType) {
         self.gameType = gameType
     }
 }
-
 
 extension GameViewController: GameViewInput {
     
