@@ -53,12 +53,25 @@ public class GameboardView: UIView {
         addSubview(markView)
     }
     
+    public func placeSurelyMarkView(_ markView: MarkView, at position: GameboardPosition) {
+        clear(position: position)
+        markViewForPosition[position] = markView
+        addSubview(markView)
+        updateFrame(for: markView, at: position)
+    }
+    
     public func removeMarkView(at position: GameboardPosition) {
         guard let markView = markViewForPosition[position] else {
             return
         }
         markViewForPosition[position] = nil
         markView.removeFromSuperview()
+    }
+    
+    public func clear(position: GameboardPosition) {
+        if !self.canPlaceMarkView(at: position) {
+            markViewForPosition[position]?.removeFromSuperview()
+        }
     }
     
     // MARK: - UIView
@@ -142,4 +155,6 @@ public class GameboardView: UIView {
                                 height: rowHeight).insetBy(dx: 0.5 * Constants.lineWidth,
                                                            dy: 0.5 * Constants.lineWidth)
     }
+    
 }
+
