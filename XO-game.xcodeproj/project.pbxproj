@@ -11,8 +11,8 @@
 		7536B24D277C78CA009A04C9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536B24C277C78CA009A04C9 /* MenuViewController.swift */; };
 		7536B24F277C7CE0009A04C9 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536B24E277C7CE0009A04C9 /* GameMode.swift */; };
 		7536B253277C925A009A04C9 /* BotState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536B252277C925A009A04C9 /* BotState.swift */; };
-		7538BB27277DD675005B33DB /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538BB26277DD675005B33DB /* GameSettings.swift */; };
 		7538BB29277DDC44005B33DB /* PlayerFiveMovesInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538BB28277DDC44005B33DB /* PlayerFiveMovesInputState.swift */; };
+		7538BB2E277DE0F9005B33DB /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538BB2D277DE0F9005B33DB /* GameSettings.swift */; };
 		75D19D28277CAB0D0027B4B6 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D19D27277CAB0D0027B4B6 /* Menu.storyboard */; };
 		75D19D2F277CC6800027B4B6 /* MoveInvoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D19D2E277CC6800027B4B6 /* MoveInvoker.swift */; };
 		75D19D31277CC6970027B4B6 /* MoveCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D19D30277CC6970027B4B6 /* MoveCommand.swift */; };
@@ -44,8 +44,8 @@
 		7536B24C277C78CA009A04C9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		7536B24E277C7CE0009A04C9 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 		7536B252277C925A009A04C9 /* BotState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotState.swift; sourceTree = "<group>"; };
-		7538BB26277DD675005B33DB /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		7538BB28277DDC44005B33DB /* PlayerFiveMovesInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFiveMovesInputState.swift; sourceTree = "<group>"; };
+		7538BB2D277DE0F9005B33DB /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		75D19D27277CAB0D0027B4B6 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		75D19D2E277CC6800027B4B6 /* MoveInvoker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoveInvoker.swift; path = "XO-game/Command/MoveInvoker.swift"; sourceTree = SOURCE_ROOT; };
 		75D19D30277CC6970027B4B6 /* MoveCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveCommand.swift; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 				F874E4EE2225DE4500364CAE /* Player.swift */,
 				75199C3A277C74EE00122ABA /* GameType.swift */,
 				7536B24E277C7CE0009A04C9 /* GameMode.swift */,
-				7538BB26277DD675005B33DB /* GameSettings.swift */,
+				7538BB2D277DE0F9005B33DB /* GameSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 			files = (
 				75FA0731277B34F1009CDAA4 /* GameEndedState.swift in Sources */,
 				75FA072F277B2238009CDAA4 /* PlayerInputState.swift in Sources */,
-				7538BB27277DD675005B33DB /* GameSettings.swift in Sources */,
+				7538BB2E277DE0F9005B33DB /* GameSettings.swift in Sources */,
 				F874E4732224621100364CAE /* GameViewController.swift in Sources */,
 				75FA0734277B52CE009CDAA4 /* Copy.swift in Sources */,
 				F874E4DD2225C25D00364CAE /* GameboardPosition.swift in Sources */,
