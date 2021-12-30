@@ -26,6 +26,11 @@ class MoveInvoker {
         self.commands.removeAll()
     }
     
+    func needExecute() -> Bool {
+        let needExecute =  self.commands.count == self.batchSize
+        return needExecute
+    }
+    
     func execute(completion: @escaping () -> Void) {
         self.completion = completion
         
