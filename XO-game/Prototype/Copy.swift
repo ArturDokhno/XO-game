@@ -6,7 +6,6 @@
 //  Copyright © 2021 plasmon. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 protocol Copying {
@@ -14,7 +13,7 @@ protocol Copying {
 }
 
 extension Copying {
-    func copy() -> Self {
+    func makeCopy() -> Self {
         return type(of: self).init(self)
     }
 }

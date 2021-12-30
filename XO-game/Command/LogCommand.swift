@@ -8,28 +8,16 @@
 
 import Foundation
 
-// MARK: - Command
-
-final class LogCommand {
+class LoggerCommand {
     
-    let action: LogAction
+    let message: String
     
-    init(action: LogAction) {
-        self.action = action
+    init(message: String) {
+        self.message = message
     }
     
-    var logMessage: String {
-        switch self.action {
-        case .playerInput(let player, let position):
-            return "\(player) placed mark at \(position)"
-        case .gameFinished(let winner):
-            if let winner = winner {
-                return "\(winner) win game"
-            } else {
-                return "game finished with no winner"
-            }
-        case .restartGame:
-            return "game restarted"
-        }
+    func execute() {
+        LoggerReceiver.shared.log(mesage: self.message)
     }
+    
 }

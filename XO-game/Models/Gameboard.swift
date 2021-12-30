@@ -10,11 +10,7 @@ import Foundation
 
 public final class Gameboard {
     
-    // MARK: - Properties
-    
     private lazy var positions: [[Player?]] = initialPositions()
-    
-    // MARK: - public
     
     public func setPlayer(_ player: Player, at position: GameboardPosition) {
         positions[position.column][position.row] = player
@@ -38,7 +34,35 @@ public final class Gameboard {
         return positions[column][row] == player
     }
     
-    // MARK: - Private
+    public func containsAnyPlayer(at position: GameboardPosition) -> Bool {
+        let (column, row) = (position.column, position.row)
+        return positions[column][row] != nil
+    }
+    
+    public func areAllPositionsFullfilled() -> Bool {
+        for array in positions {
+            for position in array {
+                if position == nil {
+                    return false
+                }
+            }
+        }
+        
+        return true
+    }
+    
+    public func getFreePositions() -> [GameboardPosition] {
+        var freePositions: [GameboardPosition] = []
+        for (column, columnValue) in positions.enumerated() {
+            for (row, rowValue) in columnValue.enumerated() {
+                if rowValue == nil {
+                    let freePosition = GameboardPosition(column: column, row: row)
+                    freePositions.append(freePosition)
+                }
+            }
+        }
+        return freePositions
+    }
     
     private func initialPositions() -> [[Player?]] {
         var positions: [[Player?]] = []
